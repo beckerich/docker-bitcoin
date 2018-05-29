@@ -1,0 +1,13 @@
+version: '3'
+services:
+  bitcoind:
+    tty: true
+    restart: always
+    image: hbeckeri/bitcoind:0.16.0
+    volumes:
+     - ./data:/coin/data
+     - ./coin.conf:/root/.btcprivate/btcprivate.conf
+     - ./coin.conf:/coin/data/btcprivate.conf
+    ports:
+       - 3000:3000
+       - 3001:3001
