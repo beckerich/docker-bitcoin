@@ -4,7 +4,7 @@ FROM debian:stretch-slim
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y --no-install-recommends apt-utils 
 RUN apt-get -y install \
-	libssl libboost libevent libdb4.8 \
+	libssl libboost libevent libdb4.8
 
 # Build
 RUN git clone https://github.com/bitcoin/bitcoin.git --branch v0.16.0 /tmp/coin-daemon

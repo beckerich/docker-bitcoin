@@ -6,8 +6,8 @@ services:
     image: hbeckeri/bitcoind:0.16.0
     volumes:
      - ./data:/coin/data
-     - ./coin.conf:/root/.btcprivate/btcprivate.conf
-     - ./coin.conf:/coin/data/btcprivate.conf
+     - ./coin.conf:/root/.bitcoin/bitcoin.conf
+     - ./coin.conf:/coin/data/bitcoin.conf
     ports:
        - 3000:3000
        - 3001:3001
